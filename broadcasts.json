@@ -31,5 +31,13 @@
         "failed": 0,
         "created_at": "2025-08-10 14:07:45",
         "status": "completed"
+    },
+    {
+        "text": "Проверка рассылки",
+        "date": "10-08-2025 16:40",
+        "success": 8,
+        "failed": 0,
+        "created_at": "2025-08-10 16:40:44",
+        "status": "completed"
     }
 ]

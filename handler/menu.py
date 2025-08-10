@@ -77,7 +77,7 @@ async def process_support_message(message: types.Message, state: FSMContext, bot
     user_info = (
         f"👤 Пользователь: @{message.from_user.username or 'нет username'}\n"
         f"🆔 ID: {message.from_user.id}\n"
-        f"📅 Дата: {message.date.strftime('%Y-%m-%d %H:%M')}\n\n"
+        f"📅 Дата: {message.date.strftime('%d-%m-%Y %H:%M')}\n\n"
         f"✉️ Сообщение:\n{support_message}"
     )
 
@@ -185,7 +185,7 @@ async def process_time_selection(callback: types.CallbackQuery, state: FSMContex
         "username": user["username"],
         "phone": user["username_phone"],
         "time": selected_time,
-        "date": callback.message.date.strftime("%Y-%m-%d %H:%M")
+        "date": callback.message.date.strftime("%d-%m-%Y %H:%M")
     }
 
     if user_repo.add_recording(recording_data):
@@ -350,7 +350,7 @@ async def input_category(message: Message, state: FSMContext, bot: Bot):
             f"📧 *Email:* {user_data['username_email']}\n"
             f"🏆 *Уровень игры:* {user_data['username_category']}\n"
             f"🆔 *ID:* {message.from_user.id}\n"
-            f"📅 *Дата регистрации:* {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+            f"📅 *Дата регистрации:* {datetime.now().strftime('%d-%m-%Y %H:%M')}"
         )
 
         try:
@@ -582,7 +582,7 @@ async def process_cancel_recording(callback: types.CallbackQuery, state: FSMCont
                 f"👤 Пользователь: {user['username']}\n"
                 f"📱 Телефон: {user['username_phone']}\n"
                 f"🕒 Время: {time_to_cancel}\n"
-                f"📅 Дата отмены: {callback.message.date.strftime('%Y-%m-%d %H:%M')}"
+                f"📅 Дата отмены: {callback.message.date.strftime('%d-%m-%Y %H:%M')}"
             )
 
         await callback.message.answer(
@@ -679,7 +679,7 @@ async def process_admin_broadcast(message: types.Message, state: FSMContext, bot
             logger.error(f"Ошибка отправки пользователю {user.get('user_id')}: {e}")
     user_repo.add_broadcast({
         "text": message.text,
-        "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "date": datetime.now().strftime("%d-%m-%Y %H:%M"),
         "success": success,
         "failed": failed
     })
@@ -787,7 +787,7 @@ async def input_category(message: Message, state: FSMContext, bot: Bot):
             f"📧 *Email:* {user_data['username_email']}\n"
             f"🏆 *Уровень игры:* {user_data['username_category']}\n"
             f"🆔 *ID:* {message.from_user.id}\n"
-            f"📅 *Дата регистрации:* {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+            f"📅 *Дата регистрации:* {datetime.now().strftime('%d-%m-%Y %H:%M')}"
         )
 
         try:
