@@ -2,10 +2,10 @@
     {
         "user_id": 5042095324,
         "username": "ксю",
-        "username_surname": "1",
+        "username_surname": "Фамилия",
         "username_phone": "111",
-        "username_email": "агагагага",
-        "username_category": "кшрщцрк",
+        "username_email": "email",
+        "username_category": "0",
         "registration_date": "2025-08-09 15:54:40"
     },
     {
@@ -61,5 +61,14 @@
         "username_email": "lyalyatopolya@mы.lo",
         "username_category": "1",
         "registration_date": "2025-08-10 14:43:19"
+    },
+    {
+        "user_id": 835637079,
+        "username": "Гойда",
+        "username_surname": "Гойда",
+        "username_phone": "Гойда",
+        "username_email": "Гойда",
+        "username_category": "Гойда",
+        "registration_date": "2025-08-10 16:02:14"
     }
 ]

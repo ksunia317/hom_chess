@@ -191,7 +191,6 @@ async def process_time_selection(callback: types.CallbackQuery, state: FSMContex
     if user_repo.add_recording(recording_data):
         builder = InlineKeyboardBuilder()
         builder.button(text="Отменить запись", callback_data="cancel_recording")
-        builder.button(text="Меню", callback_data="menu")
         builder.adjust(1)
 
         await callback.message.answer(
