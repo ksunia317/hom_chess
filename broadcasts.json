@@ -1,0 +1,35 @@
+[
+    {
+        "text": "проверка связи",
+        "success_count": 3,
+        "failed_count": 0,
+        "failed_ids": [],
+        "date": "2025-08-09 15:27:44",
+        "created_at": "2025-08-09 15:27:44",
+        "status": "completed"
+    },
+    {
+        "text": "проверка связи",
+        "date": "2025-08-09 16:16",
+        "success": 1,
+        "failed": 0,
+        "created_at": "2025-08-09 16:16:30",
+        "status": "completed"
+    },
+    {
+        "text": "рассылка",
+        "date": "2025-08-09 16:35",
+        "success": 1,
+        "failed": 0,
+        "created_at": "2025-08-09 16:35:06",
+        "status": "completed"
+    },
+    {
+        "text": "привета",
+        "date": "2025-08-10 14:07",
+        "success": 2,
+        "failed": 0,
+        "created_at": "2025-08-10 14:07:45",
+        "status": "completed"
+    }
+]
