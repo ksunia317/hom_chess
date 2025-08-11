@@ -967,7 +967,7 @@ async def admin_back(callback: types.CallbackQuery):
 
 
 @router.callback_query(F.data == "admin_all_users")
-async def show_all_users(callback: types.CallbackQuery):
+async def show_all_users(callback: types.CallbackQuery, bot: Bot):
     if callback.from_user.id != 5042095324:
         await callback.answer("Доступ запрещен")
         return
@@ -980,11 +980,19 @@ async def show_all_users(callback: types.CallbackQuery):
 
     message_text = "👥 Все пользователи:\n\n"
     for i, user in enumerate(users, 1):
+        try:
+            tg_user = await bot.get_chat(user['user_id'])
+            username = f"@{tg_user.username}" if tg_user.username else "нет username"
+        except Exception as e:
+            username = "недоступен"
+            logger.error(f"Ошибка получения username для {user['user_id']}: {e}")
+
         reg_date = user.get('registration_date', 'неизвестно')
         message_text += (
             f"{i}. {user.get('username', 'Неизвестно')} "
             f"{user.get('username_surname', '')}\n"
-            f"   📱 {user.get('username_phone', 'Не указан')} "
+            f"   👤 {username} "
+            f"📱 {user.get('username_phone', 'Не указан')} "
             f"🆔 {user.get('user_id', 'N/A')}\n"
             f"   📅 {reg_date}\n\n"
         )
