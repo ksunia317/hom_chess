@@ -79,5 +79,23 @@
         "username_email": "ALABUGAPOLITECH@PUTINKRUTOI.com",
         "username_category": "shashki",
         "registration_date": "2025-08-10 16:40:44"
+    },
+    {
+        "user_id": 805498581,
+        "username": "Маша",
+        "username_surname": "Ляпина",
+        "username_phone": "89058197762662",
+        "username_email": "mari homka",
+        "username_category": "легкий",
+        "registration_date": "2025-08-11 14:49:37"
+    },
+    {
+        "user_id": 5212372087,
+        "username": "Альберт",
+        "username_surname": "Габзалилов",
+        "username_phone": "+79901234567",
+        "username_email": "Gud",
+        "username_category": "Гроссмейстер",
+        "registration_date": "2025-08-11 15:00:20"
     }
 ]
