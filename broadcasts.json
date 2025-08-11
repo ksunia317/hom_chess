@@ -39,5 +39,13 @@
         "failed": 0,
         "created_at": "2025-08-10 16:40:44",
         "status": "completed"
+    },
+    {
+        "text": "всем приветик я ляпина мария ваш будущий тренер",
+        "date": "11-08-2025 14:36",
+        "success": 9,
+        "failed": 0,
+        "created_at": "2025-08-11 14:36:04",
+        "status": "completed"
     }
 ]
