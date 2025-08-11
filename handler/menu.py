@@ -577,7 +577,7 @@ async def process_cancel_recording(callback: types.CallbackQuery, state: FSMCont
         user = user_repo.get_user_by_id(user_id)
         if user:
             await bot.send_message(
-                5042095324,
+                6166075182,
                 f"❌ Запись отменена:\n\n"
                 f"👤 Пользователь: {user['username']}\n"
                 f"📱 Телефон: {user['username_phone']}\n"
