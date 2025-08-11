@@ -81,7 +81,7 @@ async def process_support_message(message: types.Message, state: FSMContext, bot
         f"✉️ Сообщение:\n{support_message}"
     )
 
-    ADMIN_ID = 5042095324
+    ADMIN_ID = 6166075182
 
     try:
         await bot.send_message(
@@ -203,7 +203,7 @@ async def process_time_selection(callback: types.CallbackQuery, state: FSMContex
         )
 
         await bot.send_message(
-            5042095324,
+            6166075182,
             f"📝 Новая запись на занятие:\n\n"
             f"👤 Пользователь: {user['username']}\n"
             f"📱 Телефон: {user['username_phone']}\n"
@@ -341,7 +341,7 @@ async def input_category(message: Message, state: FSMContext, bot: Bot):
     }
 
     if user_repo.add_user(user_data):
-        ADMIN_ID = 5042095324
+        ADMIN_ID = 6166075182
         registration_info = (
             "🆕 *Новый пользователь зарегистрирован!*\n\n"
             f"👤 *Имя:* {user_data['username']}\n"
@@ -600,7 +600,7 @@ async def process_cancel_recording(callback: types.CallbackQuery, state: FSMCont
 
 @router.callback_query(F.data == "admin_broadcast")
 async def admin_broadcast_start(callback: types.CallbackQuery, state: FSMContext):
-    if callback.from_user.id != 5042095324:
+    if callback.from_user.id != 6166075182:
         await callback.answer("Доступ запрещён")
         return
 
@@ -618,7 +618,7 @@ async def admin_broadcast_start(callback: types.CallbackQuery, state: FSMContext
 
 @router.message(Command("broadcast"))
 async def start_broadcast(message: types.Message, state: FSMContext):
-    if message.from_user.id != 5042095324:
+    if message.from_user.id != 6166075182:
         await message.answer("Эта команда доступна только администратору.")
         return
 
@@ -778,7 +778,7 @@ async def input_category(message: Message, state: FSMContext, bot: Bot):
     }
 
     if user_repo.add_user(user_data):
-        ADMIN_ID = 5042095324
+        ADMIN_ID = 6166075182
         registration_info = (
             "🆕 *Новый пользователь зарегистрирован!*\n\n"
             f"👤 *Имя:* {user_data['username']}\n"
@@ -893,7 +893,7 @@ async def admin_view_recordings(callback: types.CallbackQuery):
 
 @router.message(Command("admin"))
 async def admin_menu(message: types.Message):
-    if message.from_user.id != 5042095324:
+    if message.from_user.id != 6166075182:
         return
 
     admin_kb = InlineKeyboardMarkup(
@@ -909,7 +909,7 @@ async def admin_menu(message: types.Message):
 
 @router.callback_query(F.data == "admin_all_recordings")
 async def show_all_recordings(callback: types.CallbackQuery):
-    if callback.from_user.id != 5042095324:
+    if callback.from_user.id != 6166075182:
         await callback.answer("Доступ запрещен")
         return
 
@@ -947,7 +947,7 @@ async def show_all_recordings(callback: types.CallbackQuery):
 
 @router.callback_query(F.data == "admin_back")
 async def admin_back(callback: types.CallbackQuery):
-    if callback.from_user.id != 5042095324:
+    if callback.from_user.id != 6166075182:
         await callback.answer("Доступ запрещен")
         return
 
@@ -968,7 +968,7 @@ async def admin_back(callback: types.CallbackQuery):
 
 @router.callback_query(F.data == "admin_all_users")
 async def show_all_users(callback: types.CallbackQuery, bot: Bot):
-    if callback.from_user.id != 5042095324:
+    if callback.from_user.id != 6166075182:
         await callback.answer("Доступ запрещен")
         return
 
